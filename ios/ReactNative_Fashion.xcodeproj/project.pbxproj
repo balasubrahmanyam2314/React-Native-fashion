@@ -20,6 +20,9 @@
 		A585F522AB7D4D2A97E29B19 /* libPods-ReactNative_Fashion-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F96B7B47DA3D08EDFC0AEBF3 /* libPods-ReactNative_Fashion-tvOSTests.a */; };
 		B88F8E3F9156E8AE5B5AAAE1 /* libPods-ReactNative_Fashion-ReactNative_FashionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691731E68420E899557F58D /* libPods-ReactNative_Fashion-ReactNative_FashionTests.a */; };
 		FD455C686A62F13C5891BB57 /* libPods-ReactNative_Fashion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0170B04D7EB8A465F46C21B /* libPods-ReactNative_Fashion.a */; };
+		C0D133C6465F4DF5A5C8D0CB /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65B70631860D48EABEC331C8 /* SFProText-Bold.otf */; };
+		0D409320A08E458A8C28F4DE /* SFProText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 554D9DF361294524BD5B68A1 /* SFProText-Regular.otf */; };
+		75A9390C6FAA4137A7404124 /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9935CE4E8DCE47EAA8609A15 /* SFProText-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEC8915188FDFB754D16C53C /* Pods-ReactNative_Fashion-ReactNative_FashionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative_Fashion-ReactNative_FashionTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative_Fashion-ReactNative_FashionTests/Pods-ReactNative_Fashion-ReactNative_FashionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F96B7B47DA3D08EDFC0AEBF3 /* libPods-ReactNative_Fashion-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNative_Fashion-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B70631860D48EABEC331C8 /* SFProText-Bold.otf */ = {isa = PBXFileReference; name = "SFProText-Bold.otf"; path = "../assets/fonts/SFProText-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		554D9DF361294524BD5B68A1 /* SFProText-Regular.otf */ = {isa = PBXFileReference; name = "SFProText-Regular.otf"; path = "../assets/fonts/SFProText-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9935CE4E8DCE47EAA8609A15 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; name = "SFProText-Semibold.otf"; path = "../assets/fonts/SFProText-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EBE3DD5AFF748194916A6B13 /* Pods */,
+				00AE2DC604FA4330896E4BAD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +204,17 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		00AE2DC604FA4330896E4BAD /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				65B70631860D48EABEC331C8 /* SFProText-Bold.otf */,
+				554D9DF361294524BD5B68A1 /* SFProText-Regular.otf */,
+				9935CE4E8DCE47EAA8609A15 /* SFProText-Semibold.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -344,6 +362,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C0D133C6465F4DF5A5C8D0CB /* SFProText-Bold.otf in Resources */,
+				0D409320A08E458A8C28F4DE /* SFProText-Regular.otf in Resources */,
+				75A9390C6FAA4137A7404124 /* SFProText-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
