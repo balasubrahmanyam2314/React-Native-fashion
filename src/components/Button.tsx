@@ -1,13 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
-
 import {useTheme} from '@shopify/restyle';
-import {Theme} from './Theme';
+import {Theme, Text} from './Theme';
 
 interface ButtonProps {
   label: string;
-  varient: 'default' | 'primary';
+  varient: 'default' | 'primary' | 'transparent';
   onPress: () => void;
 }
 
@@ -20,8 +19,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   label: {
-    fontSize: 15,
-    fontFamily: 'SFProText-Semibold',
     textAlign: 'center',
   },
 });
@@ -31,13 +28,21 @@ const Button = ({label, varient, onPress}: ButtonProps) => {
   const backgroundColor =
     varient === 'primary'
       ? theme.colors.primary
-      : theme.colors.buttonBackground;
+      : varient === 'transparent'
+      ? theme.colors.transparent
+      : theme.colors.gray;
   const color = varient === 'primary' ? theme.colors.white : theme.colors.title;
   return (
     <RectButton style={[styles.container, {backgroundColor}]} {...{onPress}}>
-      <Text style={[styles.label, {color}]}>{label}</Text>
+      <Text variant="button" style={[styles.label, {color}]}>
+        {label}
+      </Text>
     </RectButton>
   );
+};
+
+Button.defaultProps = {
+  varient: 'default',
 };
 
 export default Button;
