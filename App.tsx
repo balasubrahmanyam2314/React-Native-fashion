@@ -1,7 +1,9 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Onboarding,Welcome} from './src/Authentication';
+import {ThemeProvider} from '@shopify/restyle';
+import {Onboarding, Welcome} from './src/Authentication';
+import {theme} from './src/components';
 
 const AuthenticationStack = createStackNavigator();
 
@@ -15,8 +17,10 @@ const AuthenticationNavigator = () => {
 };
 export default function App() {
   return (
-    <NavigationContainer>
-      <AuthenticationNavigator />
-    </NavigationContainer>
+    <ThemeProvider {...{theme}}>
+      <NavigationContainer>
+        <AuthenticationNavigator />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }

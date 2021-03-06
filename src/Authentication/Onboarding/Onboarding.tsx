@@ -2,12 +2,11 @@ import React, {useRef} from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Animated, {divide, multiply} from 'react-native-reanimated';
 import {useScrollHandler, interpolateColor} from 'react-native-redash';
-import Slide, {SLIDE_HEIGHT,BORDER_RADIUS} from './Slide';
+import Slide, {SLIDE_HEIGHT, BORDER_RADIUS} from './Slide';
 import Subslide from './Subslide';
 import Dot from './Dot';
 
 const {width} = Dimensions.get('window');
-
 
 interface OnboardingProps {}
 
@@ -44,7 +43,7 @@ const slides = [
     description:
       "Confused about your outfit? Don't worry! Find the best outfit here!",
     color: '#BFEAF5',
-    picture: require('../../assets/11.jpg'),
+    picture: require('../../assets/1.png'),
   },
   {
     title: 'Playful',
@@ -52,7 +51,7 @@ const slides = [
     description:
       'Hating the clothes in your wardrobe? Explore hundreds of outfits ideas',
     color: '#BEECC4',
-    picture: require('../../assets/22.jpg'),
+    picture: require('../../assets/2.png'),
   },
   {
     title: 'Excentric',
@@ -60,7 +59,7 @@ const slides = [
     description:
       'Create your individual & unique style and look amazing everyday',
     color: '#FFE4D9',
-    picture: require('../../assets/33.jpg'),
+    picture: require('../../assets/3.png'),
   },
   {
     title: 'Funky',
@@ -68,7 +67,7 @@ const slides = [
     description:
       'Discover the latest trends in fashion and explore your personality',
     color: '#FFDDDD',
-    picture: require('../../assets/44.jpg'),
+    picture: require('../../assets/4.png'),
   },
 ];
 const Onboarding = () => {
@@ -89,8 +88,8 @@ const Onboarding = () => {
           showsHorizontalScrollIndicator={false}
           decelerationRate="fast"
           {...scrollHandler}>
-          {slides.map(({title,picture}, index) => (
-            <Slide key={index}  right={!!(index % 2)} {...{title,picture}}/>
+          {slides.map(({title, picture}, index) => (
+            <Slide key={index} right={!!(index % 2)} {...{title, picture}} />
           ))}
         </Animated.ScrollView>
       </Animated.View>
