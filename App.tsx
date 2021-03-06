@@ -1,26 +1,17 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
 import {ThemeProvider} from '@shopify/restyle';
-import {Onboarding, Welcome} from './src/Authentication';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {theme} from './src/components';
-import {Routes} from './src/components/Navigation';
+import {AuthenticationNavigator} from './src/Authentication';
 
-const AuthenticationStack = createStackNavigator<Routes>();
-
-const AuthenticationNavigator = () => {
-  return (
-    <AuthenticationStack.Navigator headerMode="none">
-      <AuthenticationStack.Screen name="Onboarding" component={Onboarding} />
-      <AuthenticationStack.Screen name="Welcome" component={Welcome} />
-    </AuthenticationStack.Navigator>
-  );
-};
 export default function App() {
   return (
     <ThemeProvider {...{theme}}>
       <NavigationContainer>
-        <AuthenticationNavigator />
+        <SafeAreaProvider>
+          <AuthenticationNavigator />
+        </SafeAreaProvider>
       </NavigationContainer>
     </ThemeProvider>
   );

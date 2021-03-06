@@ -16,6 +16,7 @@ const palette = {
   primary: '#2CB9B0',
   gray: 'rgba(12,13,52,0.05)',
   transparent: 'transparent',
+  secondary:'#0C0D34'
 };
 
 const theme = createTheme({
@@ -26,6 +27,7 @@ const theme = createTheme({
     white: palette.white,
     gray: palette.gray,
     transparent: palette.transparent,
+    secondary:palette.secondary
   },
   spacing: {
     s: 8,
@@ -38,6 +40,7 @@ const theme = createTheme({
     tablet: 768,
   },
   borderRadii: {
+    none:0,
     s: 4,
     m: 10,
     l: 25,
